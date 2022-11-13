@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8000
 
 const withDb = async(operations,res)=>{
     try{
-        const client = await MongoClient.connect('mongodb+srv://temaku:SB2f0CgNYmdLyQUT@cluster0.cdv7o.mongodb.net/?retryWrites=true&w=majority')
+        const client = await MongoClient.connect('')
         const db = client.db('mernblog')
         await operations(db)
         client.close();
